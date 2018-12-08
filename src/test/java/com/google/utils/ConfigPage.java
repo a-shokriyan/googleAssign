@@ -12,7 +12,7 @@ public class ConfigPage {
 
 		prop = new Properties();
 
-		String path = System.getProperty("user.dir") + "Configuration\\credentional.properties";
+		String path = System.getProperty("user.dir") + "\\Configuration\\credentional.properties";
 
 		try {
 			FileInputStream fis = new FileInputStream(path);
@@ -41,11 +41,11 @@ public class ConfigPage {
 	}
 
 	public String getChromepath() {
-		String chromePath = System.getProperty("user.dir") + prop.getProperty("chromepath");
+		String chromePath = prop.getProperty("chromepath");
 		return chromePath;
 	}
 
 	public String getFirefoxpath() {
-		return System.getProperty("user.dir") + prop.getProperty("firefoxpath");
+		return prop.getProperty("firefoxpath");
 	}
 }

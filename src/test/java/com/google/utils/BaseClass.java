@@ -10,15 +10,16 @@ public class BaseClass {
 	public static WebDriver driver;
 	public static ConfigPage config;
 
-	public void start(String browser) {
+	public static void start(String browser) {
 
 		config = new ConfigPage();
 		if (browser.equalsIgnoreCase("chrome")) {
-			System.getProperty("webdriver.chrome.driver", config.getChromepath());
+			String chromePath = config.getChromepath();
+			System.setProperty("webdriver.chrome.driver", chromePath);
 			driver = new ChromeDriver();
 		}
 		else if (browser.equalsIgnoreCase("firefox")) {
-			System.getProperty("webdriver.gecko.driver", config.getFirefoxpath());
+			System.setProperty("webdriver.gecko.driver", config.getFirefoxpath());
 			driver= new FirefoxDriver();
 					}
 		else {

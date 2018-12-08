@@ -9,6 +9,7 @@ public class HomePageTest extends BaseClass{
 	
 	@Test
 	public void getTitle() {
+		start("chrome");
 		String actual=driver.getTitle();
 		String expected= "Google";
 		Assert.assertEquals(actual, expected);

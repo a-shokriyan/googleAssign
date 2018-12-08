@@ -2,16 +2,27 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="64" started-at="2018-12-07T23:19:25Z" finished-at="2018-12-07T23:19:25Z">
+  <suite name="Default suite" duration-ms="128" started-at="2018-12-08T15:55:09Z" finished-at="2018-12-08T15:55:09Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="64" started-at="2018-12-07T23:19:25Z" finished-at="2018-12-07T23:19:25Z">
+    <test name="Default test" duration-ms="128" started-at="2018-12-08T15:55:09Z" finished-at="2018-12-08T15:55:09Z">
       <class name="com.google.test.HomePageTest">
-        <test-method status="FAIL" signature="getTitle()[pri:0, instance:com.google.test.HomePageTest@3532ec19]" name="getTitle" duration-ms="18" started-at="2018-12-07T23:19:25Z" finished-at="2018-12-07T23:19:25Z">
-          <exception class="java.lang.NullPointerException">
+        <test-method status="FAIL" signature="getTitle()[pri:0, instance:com.google.test.HomePageTest@6f7fd0e6]" name="getTitle" duration-ms="80" started-at="2018-12-08T15:55:09Z" finished-at="2018-12-08T15:55:09Z">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information, see https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver. The latest version can be downloaded from http://chromedriver.storage.googleapis.com/index.html]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-at com.google.test.HomePageTest.getTitle(HomePageTest.java:11)
+              <![CDATA[java.lang.IllegalStateException: The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information, see https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver. The latest version can be downloaded from http://chromedriver.storage.googleapis.com/index.html
+at com.google.common.base.Preconditions.checkState(Preconditions.java:847)
+at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:134)
+at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
+at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+at com.google.utils.BaseClass.start(BaseClass.java:18)
+at com.google.test.HomePageTest.getTitle(HomePageTest.java:12)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -39,7 +50,7 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getTitle -->
