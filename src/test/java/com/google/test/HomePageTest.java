@@ -13,7 +13,7 @@ public class HomePageTest extends BaseClass{
 		String actual=driver.getTitle();
 		String expected= "Google";
 		Assert.assertEquals(actual, expected);
-		
+		tearDown();
 	}
 
 }
